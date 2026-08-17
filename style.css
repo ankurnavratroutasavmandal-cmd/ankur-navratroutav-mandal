@@ -1,7 +1,7 @@
-.mandal-logo {
-    width: 220px;
-    height: 220px;
-    object-fit: contain;
-    display: block;
-    margin: 20px auto;
+.devi {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    border: 8px solid #f5c542;
+    object-fit: cover;
 }
