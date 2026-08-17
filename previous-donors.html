@@ -1,0 +1,648 @@
+```html
+<!DOCTYPE html>
+<html lang="mr">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>मागील वर्षाचे देणगीदार | सार्वजनिक अंकुर नवरात्रोत्सव मंडळ</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Noto Sans Devanagari", "Mangal", Arial, sans-serif;
+            background: linear-gradient(135deg, #fff8e1, #fff3e0);
+            color: #4a1c00;
+        }
+
+
+        /* HEADER */
+
+        header {
+            background: linear-gradient(135deg, #8b0000, #c62828, #ef6c00);
+            color: white;
+            padding: 15px 7%;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+            border-bottom: 4px solid #ffd54f;
+        }
+
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+
+        .logo-area img {
+            width: 75px;
+            height: 75px;
+            object-fit: contain;
+            border-radius: 50%;
+            background: white;
+            padding: 4px;
+            border: 3px solid #ffd54f;
+        }
+
+
+        .logo-text h2 {
+            margin: 0;
+            color: #ffd54f;
+            font-size: 25px;
+        }
+
+
+        .logo-text p {
+            margin: 4px 0 0;
+            color: white;
+        }
+
+
+        /* NAVIGATION */
+
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 15px;
+        }
+
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+
+        nav a:hover {
+            background: #ffd54f;
+            color: #7b0000;
+            transform: translateY(-2px);
+        }
+
+
+        nav a[href="previous-donors.html"] {
+            background: #ffd54f;
+            color: #7b0000;
+        }
+
+
+        /* HERO */
+
+        .hero {
+            padding: 60px 20px;
+            text-align: center;
+
+            background:
+                radial-gradient(circle at top,
+                rgba(255,213,79,0.3),
+                transparent 50%),
+                linear-gradient(135deg,
+                #650000,
+                #a90000,
+                #e65100);
+
+            color: white;
+
+            border-bottom: 5px solid #ffd54f;
+        }
+
+
+        .hero h1 {
+            margin: 0 0 12px;
+            color: #ffd54f;
+            font-size: 40px;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+        }
+
+
+        .hero p {
+            font-size: 18px;
+            margin: 0;
+        }
+
+
+        /* MAIN */
+
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+
+        /* YEAR */
+
+        .year-box {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            border: 2px solid #ffd54f;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.12);
+            margin-bottom: 30px;
+        }
+
+
+        .year-box label {
+            font-size: 18px;
+            font-weight: bold;
+            color: #8b0000;
+        }
+
+
+        .year-box select {
+            margin-left: 10px;
+            padding: 10px 25px;
+            border-radius: 25px;
+            border: 2px solid #e65100;
+            background: #fff8e1;
+            color: #7b0000;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+
+        /* TOTAL */
+
+        .total-box {
+            text-align: center;
+            background: linear-gradient(135deg, #2e7d32, #66bb6a);
+            color: white;
+            padding: 25px;
+            border-radius: 18px;
+            margin-bottom: 35px;
+            box-shadow: 0 7px 20px rgba(0,0,0,0.18);
+        }
+
+
+        .total-box h2 {
+            margin: 0 0 10px;
+        }
+
+
+        .total-amount {
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+
+        /* TABLE */
+
+        .table-wrapper {
+            overflow-x: auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+        }
+
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+
+        th {
+            background: linear-gradient(135deg, #8b0000, #e65100);
+            color: white;
+            padding: 15px;
+            font-size: 16px;
+        }
+
+
+        td {
+            padding: 14px;
+            border-bottom: 1px solid #ffe0b2;
+        }
+
+
+        tbody tr:hover {
+            background: #fff8e1;
+        }
+
+
+        td:first-child {
+            text-align: center;
+            font-weight: bold;
+        }
+
+
+        td:last-child {
+            text-align: right;
+            font-weight: bold;
+            color: #2e7d32;
+        }
+
+
+        /* NOTE */
+
+        .note {
+            margin-top: 35px;
+            padding: 25px;
+            text-align: center;
+
+            background:
+                linear-gradient(135deg,
+                #650000,
+                #a90000,
+                #e65100);
+
+            color: white;
+
+            border-radius: 18px;
+            border: 2px solid #ffd54f;
+        }
+
+
+        .note h2 {
+            color: #ffd54f;
+            margin-top: 0;
+        }
+
+
+        /* FOOTER */
+
+        footer {
+            margin-top: 50px;
+            padding: 35px 20px;
+            text-align: center;
+            color: white;
+
+            background: linear-gradient(
+                135deg,
+                #650000,
+                #8b0000,
+                #b71c1c
+            );
+
+            border-top: 5px solid #ffd54f;
+        }
+
+
+        footer h2 {
+            color: #ffd54f;
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 600px) {
+
+            .logo-area {
+                justify-content: center;
+                text-align: center;
+            }
+
+            .logo-area img {
+                width: 60px;
+                height: 60px;
+            }
+
+            .logo-text h2 {
+                font-size: 20px;
+            }
+
+            nav a {
+                font-size: 13px;
+                padding: 8px 10px;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+
+            .container {
+                padding: 12px;
+            }
+
+            .year-box select {
+                margin-top: 10px;
+            }
+
+        }
+
+
+        /* PRINT */
+
+        @media print {
+
+            nav,
+            header,
+            footer,
+            .year-box {
+                display: none !important;
+            }
+
+            body {
+                background: white;
+            }
+
+            .container {
+                margin: 0;
+                max-width: 100%;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="logo-area">
+
+            <img
+                src="images/logo.png"
+                alt="मंडळाचा Logo"
+            >
+
+            <div class="logo-text">
+
+                <h2>
+                    सार्वजनिक अंकुर
+                </h2>
+
+                <p>
+                    नवरात्रोत्सव मंडळ, बेळगुंदी
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- NAVIGATION -->
+
+        <nav>
+
+            <a href="index.html">
+                मुख्यपृष्ठ
+            </a>
+
+            <a href="events.html">
+                कार्यक्रम
+            </a>
+
+            <a href="aarti.html">
+                आरती
+            </a>
+
+            <a href="gallery.html">
+                गॅलरी
+            </a>
+
+            <a href="annual-report.html">
+                वार्षिक अहवाल
+            </a>
+
+            <a href="previous-donors.html">
+                मागील वर्षाचे देणगीदार
+            </a>
+
+            <a href="contact.html">
+                संपर्क
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <h1>
+            🙏 मागील वर्षाचे देणगीदार
+        </h1>
+
+        <p>
+            सार्वजनिक अंकुर नवरात्रोत्सव मंडळ, बेळगुंदी
+        </p>
+
+    </section>
+
+
+    <!-- MAIN -->
+
+    <main class="container">
+
+
+        <!-- YEAR -->
+
+        <div class="year-box">
+
+            <label for="year">
+                📅 वर्ष निवडा:
+            </label>
+
+            <select id="year">
+
+                <option value="2025">
+                    2025
+                </option>
+
+                <option value="2024">
+                    2024
+                </option>
+
+                <option value="2023">
+                    2023
+                </option>
+
+                <option value="2022">
+                    2022
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- TOTAL -->
+
+        <div class="total-box">
+
+            <h2>
+                💰 एकूण देणगी
+            </h2>
+
+            <div class="total-amount">
+                ₹ 0
+            </div>
+
+        </div>
+
+
+        <!-- DONORS TABLE -->
+
+        <div class="table-wrapper">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            अ.क्र.
+                        </th>
+
+                        <th>
+                            देणगीदाराचे नाव
+                        </th>
+
+                        <th>
+                            गाव
+                        </th>
+
+                        <th>
+                            देणगी
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+                    <tr>
+
+                        <td>
+                            1
+                        </td>
+
+                        <td>
+                            देणगीदाराचे नाव
+                        </td>
+
+                        <td>
+                            बेळगुंदी
+                        </td>
+
+                        <td>
+                            ₹ 0
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            2
+                        </td>
+
+                        <td>
+                            देणगीदाराचे नाव
+                        </td>
+
+                        <td>
+                            बेळगुंदी
+                        </td>
+
+                        <td>
+                            ₹ 0
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            3
+                        </td>
+
+                        <td>
+                            देणगीदाराचे नाव
+                        </td>
+
+                        <td>
+                            बेळगुंदी
+                        </td>
+
+                        <td>
+                            ₹ 0
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+        <!-- NOTE -->
+
+        <div class="note">
+
+            <h2>
+                🌺 देणगीदारांचे मनःपूर्वक आभार 🌺
+            </h2>
+
+            <p>
+                मंडळाच्या नवरात्रोत्सवासाठी सहकार्य करणाऱ्या
+                सर्व देणगीदारांचे सार्वजनिक अंकुर नवरात्रोत्सव
+                मंडळ, बेळगुंदी यांच्यातर्फे मनःपूर्वक आभार.
+            </p>
+
+        </div>
+
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <h2>
+            सार्वजनिक अंकुर नवरात्रोत्सव मंडळ, बेळगुंदी
+        </h2>
+
+        <p>
+            स्थापना : २००२
+        </p>
+
+        <p>
+            🙏 जय माता दी 🙏
+        </p>
+
+        <br>
+
+        <p>
+            © 2026 सार्वजनिक अंकुर नवरात्रोत्सव मंडळ, बेळगुंदी
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
+```
