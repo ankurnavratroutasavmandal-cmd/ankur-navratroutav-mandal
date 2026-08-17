@@ -73,14 +73,12 @@ nav a {
     padding: 10px 15px;
     border-radius: 25px;
     font-weight: bold;
-    transition: 0.3s;
 }
 
 nav a:hover,
 nav a.active {
     background: #ffd54f;
     color: #7b0000;
-    transform: translateY(-2px);
 }
 
 /* HERO */
@@ -103,7 +101,6 @@ nav a.active {
         );
 
     color: white;
-
     border-bottom: 5px solid #ffd54f;
 }
 
@@ -111,14 +108,10 @@ nav a.active {
     margin: 0 0 12px;
     color: #ffd54f;
     font-size: 40px;
-
-    text-shadow:
-        2px 2px 5px rgba(0,0,0,0.5);
 }
 
 .hero p {
     font-size: 18px;
-    margin: 0;
 }
 
 /* CONTAINER */
@@ -129,23 +122,88 @@ nav a.active {
     padding: 20px;
 }
 
+/* ADD DONOR BOX */
+
+.add-box {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    border: 2px solid #ffd54f;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    margin-bottom: 30px;
+}
+
+.add-box h2 {
+    text-align: center;
+    color: #8b0000;
+    margin-top: 0;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+    color: #7b0000;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ffcc80;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #e65100;
+}
+
+/* ADD BUTTON */
+
+.add-btn {
+    display: block;
+    margin: 20px auto 0;
+    padding: 12px 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #8b0000,
+            #e65100
+        );
+
+    color: white;
+    border: none;
+    border-radius: 25px;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.add-btn:hover {
+    transform: translateY(-2px);
+}
+
 /* YEAR */
 
 .year-box {
     text-align: center;
-
     background: white;
-
     padding: 20px;
-
     border-radius: 15px;
-
     border: 2px solid #ffd54f;
-
-    box-shadow:
-        0 5px 18px rgba(0,0,0,0.12);
-
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 .year-box label {
@@ -156,22 +214,10 @@ nav a.active {
 
 .year-box select {
     margin-left: 10px;
-
     padding: 10px 25px;
-
     border-radius: 25px;
-
     border: 2px solid #e65100;
-
-    background: #fff8e1;
-
-    color: #7b0000;
-
     font-size: 16px;
-
-    font-weight: bold;
-
-    cursor: pointer;
 }
 
 /* TOTAL */
@@ -187,15 +233,11 @@ nav a.active {
         );
 
     color: white;
-
     padding: 25px;
-
     border-radius: 18px;
+    margin-bottom: 30px;
 
-    margin-bottom: 35px;
-
-    box-shadow:
-        0 7px 20px rgba(0,0,0,0.18);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
 
 .total-box h2 {
@@ -211,9 +253,7 @@ nav a.active {
 
 .table-wrapper {
     overflow-x: auto;
-
     background: white;
-
     border-radius: 15px;
 
     box-shadow:
@@ -222,9 +262,7 @@ nav a.active {
 
 table {
     width: 100%;
-
     border-collapse: collapse;
-
     min-width: 600px;
 }
 
@@ -237,19 +275,13 @@ th {
         );
 
     color: white;
-
     padding: 15px;
-
     font-size: 16px;
-
-    text-align: center;
 }
 
 td {
     padding: 14px;
-
-    border-bottom:
-        1px solid #ffe0b2;
+    border-bottom: 1px solid #ffe0b2;
 }
 
 tbody tr:hover {
@@ -262,10 +294,7 @@ td:first-child {
 }
 
 td:last-child {
-    text-align: right;
-
     font-weight: bold;
-
     color: #2e7d32;
 }
 
@@ -273,7 +302,6 @@ td:last-child {
 
 .note {
     margin-top: 35px;
-
     padding: 25px;
 
     text-align: center;
@@ -287,26 +315,18 @@ td:last-child {
         );
 
     color: white;
-
     border-radius: 18px;
-
     border: 2px solid #ffd54f;
-
-    box-shadow:
-        0 6px 20px rgba(0,0,0,0.15);
 }
 
 .note h2 {
     color: #ffd54f;
-
-    margin-top: 0;
 }
 
 /* FOOTER */
 
 footer {
     margin-top: 50px;
-
     padding: 35px 20px;
 
     text-align: center;
@@ -332,9 +352,12 @@ footer h2 {
 
 @media (max-width: 700px) {
 
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
     .logo-area {
         justify-content: center;
-
         text-align: center;
     }
 
@@ -373,6 +396,7 @@ footer h2 {
 
     header,
     nav,
+    .add-box,
     .year-box,
     footer {
         display: none !important;
@@ -422,8 +446,6 @@ footer h2 {
 
 </div>
 
-
-<!-- NAVIGATION -->
 
 <nav>
 
@@ -481,6 +503,121 @@ footer h2 {
 <!-- MAIN -->
 
 <main class="container">
+
+
+<!-- ADD DONOR -->
+
+<div class="add-box">
+
+<h2>
+➕ देणगीदाराची माहिती जोडा
+</h2>
+
+
+<div class="form-grid">
+
+
+<!-- NAME -->
+
+<div class="form-group">
+
+<label>
+देणगीदाराचे नाव
+</label>
+
+<input
+    type="text"
+    id="donorName"
+    placeholder="उदा. संतोष पाटील"
+>
+
+</div>
+
+
+<!-- PLACE -->
+
+<div class="form-group">
+
+<label>
+गाव
+</label>
+
+<input
+    type="text"
+    id="donorPlace"
+    placeholder="उदा. बेळगुंदी"
+>
+
+</div>
+
+
+<!-- AMOUNT -->
+
+<div class="form-group">
+
+<label>
+देणगी रक्कम
+</label>
+
+<input
+    type="number"
+    id="donorAmount"
+    placeholder="उदा. 5000"
+    min="1"
+>
+
+</div>
+
+
+</div>
+
+
+<!-- YEAR -->
+
+<div
+    class="form-grid"
+    style="margin-top:15px;"
+>
+
+<div class="form-group">
+
+<label>
+वर्ष
+</label>
+
+<select id="donorYear">
+
+<option value="2025">
+2025
+</option>
+
+<option value="2024">
+2024
+</option>
+
+<option value="2023">
+2023
+</option>
+
+<option value="2022">
+2022
+</option>
+
+</select>
+
+</div>
+
+</div>
+
+
+<button
+    class="add-btn"
+    onclick="addDonor()"
+>
+➕ देणगीदार Add करा
+</button>
+
+</div>
 
 
 <!-- YEAR SELECT -->
@@ -584,15 +721,9 @@ footer h2 {
 </h2>
 
 <p>
-
 मंडळाच्या नवरात्रोत्सवासाठी सहकार्य करणाऱ्या
 सर्व देणगीदारांचे सार्वजनिक अंकुर नवरात्रोत्सव
 मंडळ, बेळगुंदी यांच्यातर्फे मनःपूर्वक आभार.
-
-</p>
-
-<p>
-🙏 जय माता दी 🙏
 </p>
 
 </div>
@@ -626,64 +757,159 @@ footer h2 {
 
 <script>
 
-/*
-=================================================
-DEMO DONOR DATA
-=================================================
 
-सध्या ही माहिती Demo आहे.
+/* GET DONORS */
 
-नंतर PostgreSQL database मधून
-ही माहिती आणता येईल.
+function getDonors() {
 
-=================================================
-*/
+    return JSON.parse(
+        localStorage.getItem("mandalDonors") || "[]"
+    );
 
-const donors = [
+}
 
-    {
-        name: "संतोष पाटील",
-        place: "बेळगुंदी",
-        amount: 5000,
-        year: "2025"
-    },
 
-    {
-        name: "महेश पाटील",
-        place: "बेळगुंदी",
-        amount: 10000,
-        year: "2025"
-    },
+/* SAVE DONORS */
 
-    {
-        name: "अमोल शिंदे",
-        place: "बेळगुंदी",
-        amount: 2500,
-        year: "2025"
-    },
+function saveDonors(donors) {
 
-    {
-        name: "रमेश पाटील",
-        place: "बेळगुंदी",
-        amount: 3000,
-        year: "2024"
-    },
+    localStorage.setItem(
+        "mandalDonors",
+        JSON.stringify(donors)
+    );
 
-    {
-        name: "सुनील पाटील",
-        place: "बेळगुंदी",
-        amount: 5000,
-        year: "2024"
-    },
+}
 
-    {
-        name: "अशोक शिंदे",
-        place: "बेळगुंदी",
-        amount: 2000,
-        year: "2023"
+
+/* ADD DONOR */
+
+function addDonor() {
+
+    const name =
+        document
+        .getElementById("donorName")
+        .value
+        .trim();
+
+
+    const place =
+        document
+        .getElementById("donorPlace")
+        .value
+        .trim();
+
+
+    const amount =
+        Number(
+            document
+            .getElementById("donorAmount")
+            .value
+        );
+
+
+    const year =
+        document
+        .getElementById("donorYear")
+        .value;
+
+
+    /* CHECK NAME */
+
+    if (!name) {
+
+        alert(
+            "कृपया देणगीदाराचे नाव लिहा."
+        );
+
+        return;
     }
 
-];
+
+    /* CHECK PLACE */
+
+    if (!place) {
+
+        alert(
+            "कृपया गावाचे नाव लिहा."
+        );
+
+        return;
+    }
+
+
+    /* CHECK AMOUNT */
+
+    if (!amount || amount <= 0) {
+
+        alert(
+            "कृपया योग्य देणगी रक्कम लिहा."
+        );
+
+        return;
+    }
+
+
+    /* GET OLD DATA */
+
+    const donors = getDonors();
+
+
+    /* ADD NEW DONOR */
+
+    donors.push({
+
+        id: Date.now(),
+
+        name: name,
+
+        place: place,
+
+        amount: amount,
+
+        year: year
+
+    });
+
+
+    /* SAVE */
+
+    saveDonors(donors);
+
+
+    /* CLEAR INPUT */
+
+    document
+    .getElementById("donorName")
+    .value = "";
+
+
+    document
+    .getElementById("donorPlace")
+    .value = "";
+
+
+    document
+    .getElementById("donorAmount")
+    .value = "";
+
+
+    /* SELECT YEAR */
+
+    document
+    .getElementById("year")
+    .value = year;
+
+
+    /* DISPLAY */
+
+    displayDonors();
+
+
+    alert(
+        "देणगीदाराची माहिती यशस्वीपणे Save झाली."
+    );
+
+}
 
 
 /* DISPLAY DONORS */
@@ -691,11 +917,17 @@ const donors = [
 function displayDonors() {
 
     const selectedYear =
-        document.getElementById("year").value;
+        document
+        .getElementById("year")
+        .value;
+
+
+    const donors = getDonors();
 
 
     const table =
-        document.getElementById("donorTable");
+        document
+        .getElementById("donorTable");
 
 
     table.innerHTML = "";
@@ -725,11 +957,11 @@ function displayDonors() {
                 colspan="4"
                 style="
                     text-align:center;
-                    padding:30px;
+                    padding:25px;
                 "
             >
 
-                🙏 या वर्षासाठी
+                या वर्षासाठी
                 देणगीदाराची माहिती उपलब्ध नाही.
 
             </td>
@@ -741,7 +973,7 @@ function displayDonors() {
     }
 
 
-    /* DISPLAY */
+    /* DISPLAY DATA */
 
     filtered.forEach(
         (donor, index) => {
@@ -787,15 +1019,15 @@ function displayDonors() {
     /* TOTAL */
 
     document
-        .getElementById("totalAmount")
-        .innerText =
+    .getElementById("totalAmount")
+    .innerText =
         "₹ " +
         total.toLocaleString("en-IN");
 
 }
 
 
-/* LOAD */
+/* LOAD DATA */
 
 displayDonors();
 
