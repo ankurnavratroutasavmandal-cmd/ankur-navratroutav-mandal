@@ -31,32 +31,6 @@ header {
     border-bottom: 4px solid #ffd54f;
 }
 
-.logo-area {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.logo-area img {
-    width: 75px;
-    height: 75px;
-    object-fit: contain;
-    border-radius: 50%;
-    background: white;
-    padding: 4px;
-    border: 3px solid #ffd54f;
-}
-
-.logo-text h2 {
-    margin: 0;
-    color: #ffd54f;
-    font-size: 25px;
-}
-
-.logo-text p {
-    margin: 4px 0 0;
-}
-
 /* NAV */
 
 nav {
@@ -112,67 +86,6 @@ nav a.active {
     padding: 20px;
 }
 
-/* ADD FORM */
-
-.add-box {
-    background: white;
-    padding: 25px;
-    border-radius: 18px;
-    border: 2px solid #ffd54f;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
-    margin-bottom: 30px;
-}
-
-.add-box h2 {
-    text-align: center;
-    color: #8b0000;
-    margin-top: 0;
-}
-
-.form-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 15px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 7px;
-    font-weight: bold;
-    color: #7b0000;
-}
-
-.form-group input,
-.form-group select {
-    width: 100%;
-    padding: 12px;
-    border: 2px solid #ffcc80;
-    border-radius: 8px;
-    font-size: 16px;
-    outline: none;
-}
-
-.form-group input:focus,
-.form-group select:focus {
-    border-color: #e65100;
-}
-
-.add-btn {
-    display: block;
-    margin: 20px auto 0;
-    padding: 12px 30px;
-    background: linear-gradient(135deg, #8b0000, #e65100);
-    color: white;
-    border: none;
-    border-radius: 25px;
-    font-size: 17px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.add-btn:hover {
-    background: linear-gradient(135deg, #e65100, #8b0000);
-}
 
 /* YEAR */
 
@@ -306,20 +219,6 @@ footer h2 {
         grid-template-columns: 1fr;
     }
 
-    .logo-area {
-        justify-content: center;
-        text-align: center;
-    }
-
-    .logo-area img {
-        width: 60px;
-        height: 60px;
-    }
-
-    .logo-text h2 {
-        font-size: 20px;
-    }
-
     nav a {
         font-size: 13px;
         padding: 8px 10px;
@@ -344,12 +243,6 @@ footer h2 {
 
 <header>
 
-<div class="logo-area">
-
-<img src="images/logo.png" alt="मंडळाचा Logo">
-
-<div class="logo-text">
-
 <h2>सार्वजनिक अंकुर</h2>
 
 <p>नवरात्रोत्सव मंडळ, बेळगुंदी</p>
@@ -365,9 +258,7 @@ footer h2 {
 <a href="events.html">कार्यक्रम</a>
 
 <a href="aarti.html">आरती</a>
-
-<a href="gallery.html">गॅलरी</a>
-
+    
 <a href="annual-report.html">वार्षिक अहवाल</a>
 
 <a href="previous-donors.html" class="active">
