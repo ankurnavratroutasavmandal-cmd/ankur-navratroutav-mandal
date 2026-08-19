@@ -31,8 +31,6 @@ header {
     border-bottom: 4px solid #ffd54f;
 }
 
-/* NAV */
-
 nav {
     display: flex;
     justify-content: center;
@@ -61,13 +59,17 @@ nav a.active {
     padding: 60px 20px;
     text-align: center;
     background:
-        radial-gradient(circle at top,
-        rgba(255,213,79,0.3),
-        transparent 50%),
-        linear-gradient(135deg,
-        #650000,
-        #a90000,
-        #e65100);
+        radial-gradient(
+            circle at top,
+            rgba(255,213,79,0.3),
+            transparent 50%
+        ),
+        linear-gradient(
+            135deg,
+            #650000,
+            #a90000,
+            #e65100
+        );
     color: white;
     border-bottom: 5px solid #ffd54f;
 }
@@ -223,10 +225,12 @@ tbody tr:hover {
     background: #fff8e1;
 }
 
-td:last-child {
+td:nth-child(4) {
     font-weight: bold;
     color: #2e7d32;
 }
+
+/* DELETE BUTTON */
 
 .delete-btn {
     background: #d32f2f;
@@ -280,20 +284,6 @@ footer h2 {
         grid-template-columns: 1fr;
     }
 
-    .logo-area {
-        justify-content: center;
-        text-align: center;
-    }
-
-    .logo-area img {
-        width: 60px;
-        height: 60px;
-    }
-
-    .logo-text h2 {
-        font-size: 20px;
-    }
-
     nav a {
         font-size: 13px;
         padding: 8px 10px;
@@ -305,6 +295,11 @@ footer h2 {
 
     .container {
         padding: 12px;
+    }
+
+    .year-box select {
+        margin-left: 0;
+        margin-top: 10px;
     }
 }
 
@@ -319,12 +314,7 @@ footer h2 {
 <header>
 
 <h2>सार्वजनिक अंकुर</h2>
-
 <p>नवरात्रोत्सव मंडळ, बेळगुंदी</p>
-
-</div>
-
-</div>
 
 <nav>
 
@@ -423,6 +413,7 @@ min="1"
 
 <select id="donorYear">
 
+<option value="2026">2026</option>
 <option value="2025">2025</option>
 <option value="2024">2024</option>
 <option value="2023">2023</option>
@@ -436,7 +427,7 @@ min="1"
 
 
 <button class="add-btn" onclick="addDonor()">
-➕ देणगीदार Add करा
+🔐 ➕ देणगीदार Add करा
 </button>
 
 </div>
@@ -452,6 +443,7 @@ min="1"
 
 <select id="year" onchange="displayDonors()">
 
+<option value="2026">2026</option>
 <option value="2025">2025</option>
 <option value="2024">2024</option>
 <option value="2023">2023</option>
@@ -546,6 +538,17 @@ min="1"
 
 <script>
 
+/* =========================================
+   PASSWORD
+   ========================================= */
+
+const ADMIN_PASSWORD = "1234";
+
+
+/* =========================================
+   GET DONORS
+   ========================================= */
+
 function getDonors() {
 
     return JSON.parse(
@@ -554,6 +557,10 @@ function getDonors() {
 
 }
 
+
+/* =========================================
+   SAVE DONORS
+   ========================================= */
 
 function saveDonors(donors) {
 
@@ -565,47 +572,115 @@ function saveDonors(donors) {
 }
 
 
+/* =========================================
+   PASSWORD CHECK
+   ========================================= */
+
+function checkPassword(message) {
+
+    const password = prompt(message);
+
+    if (password === 6361) {
+        return false;
+    }
+
+    if (password !== ADMIN_PASSWORD) {
+
+        alert(
+            "❌ चुकीचा Password!\n\n" +
+            "ही सुविधा वापरण्यासाठी योग्य Password टाका."
+        );
+
+        return false;
+    }
+
+    return true;
+}
+
+
+/* =========================================
+   ADD DONOR
+   ========================================= */
+
 function addDonor() {
 
+    /* PASSWORD FIRST */
+
+    if (
+        !checkPassword(
+            "🔐 देणगीदार Add करण्यासाठी Password टाका:"
+        )
+    ) {
+        return;
+    }
+
+
     const name =
-        document.getElementById("donorName").value.trim();
+        document.getElementById("donorName")
+        .value
+        .trim();
+
 
     const place =
-        document.getElementById("donorPlace").value.trim();
+        document.getElementById("donorPlace")
+        .value
+        .trim();
+
 
     const amount =
-        Number(document.getElementById("donorAmount").value);
+        Number(
+            document.getElementById("donorAmount")
+            .value
+        );
+
 
     const year =
-        document.getElementById("donorYear").value;
+        document.getElementById("donorYear")
+        .value;
 
+
+    /* NAME */
 
     if (!name) {
 
-        alert("कृपया देणगीदाराचे नाव लिहा.");
-        return;
+        alert(
+            "कृपया देणगीदाराचे नाव लिहा."
+        );
 
+        return;
     }
 
+
+    /* PLACE */
 
     if (!place) {
 
-        alert("कृपया गावाचे नाव लिहा.");
-        return;
+        alert(
+            "कृपया गावाचे नाव लिहा."
+        );
 
+        return;
     }
 
+
+    /* AMOUNT */
 
     if (!amount || amount <= 0) {
 
-        alert("कृपया योग्य देणगी रक्कम लिहा.");
-        return;
+        alert(
+            "कृपया योग्य देणगी रक्कम लिहा."
+        );
 
+        return;
     }
 
 
+    /* GET OLD DATA */
+
     const donors = getDonors();
 
+
+    /* ADD NEW DONOR */
 
     donors.push({
 
@@ -622,8 +697,12 @@ function addDonor() {
     });
 
 
+    /* SAVE */
+
     saveDonors(donors);
 
+
+    /* CLEAR FORM */
 
     document.getElementById("donorName").value = "";
 
@@ -632,75 +711,119 @@ function addDonor() {
     document.getElementById("donorAmount").value = "";
 
 
+    /* SELECT SAME YEAR */
+
     document.getElementById("year").value = year;
 
+
+    /* DISPLAY */
 
     displayDonors();
 
 
-    alert("देणगीदाराची माहिती यशस्वीपणे Save झाली.");
+    alert(
+        "✅ देणगीदाराची माहिती यशस्वीपणे Save झाली."
+    );
 
 }
 
+
+/* =========================================
+   DISPLAY DONORS
+   ========================================= */
 
 function displayDonors() {
 
     const selectedYear =
         document.getElementById("year").value;
 
+
     const donors = getDonors();
+
 
     const table =
         document.getElementById("donorTable");
+
 
     table.innerHTML = "";
 
 
     const filtered =
-        donors.filter(donor => donor.year === selectedYear);
+        donors.filter(
+            donor => donor.year === selectedYear
+        );
 
 
     let total = 0;
 
 
+    /* NO DATA */
+
     if (filtered.length === 0) {
 
         table.innerHTML = `
-        <tr>
-            <td colspan="5"
-                style="text-align:center;padding:25px;">
-                या वर्षासाठी देणगीदाराची माहिती उपलब्ध नाही.
-            </td>
-        </tr>
+
+            <tr>
+
+                <td
+                    colspan="5"
+                    style="
+                        text-align:center;
+                        padding:25px;
+                    "
+                >
+
+                    या वर्षासाठी देणगीदाराची
+                    माहिती उपलब्ध नाही.
+
+                </td>
+
+            </tr>
+
         `;
 
     }
 
+
+    /* DISPLAY DATA */
 
     filtered.forEach((donor, index) => {
 
         total += Number(donor.amount);
 
 
-        const row = document.createElement("tr");
+        const row =
+            document.createElement("tr");
 
 
         row.innerHTML = `
 
-            <td>${index + 1}</td>
-
-            <td>${donor.name}</td>
-
-            <td>${donor.place}</td>
-
-            <td>₹ ${Number(donor.amount).toLocaleString("en-IN")}</td>
+            <td>
+                ${index + 1}
+            </td>
 
             <td>
+                ${escapeHTML(donor.name)}
+            </td>
+
+            <td>
+                ${escapeHTML(donor.place)}
+            </td>
+
+            <td>
+                ₹ ${Number(donor.amount)
+                    .toLocaleString("en-IN")}
+            </td>
+
+            <td>
+
                 <button
                     class="delete-btn"
-                    onclick="deleteDonor(${donor.id})">
-                    Delete
+                    onclick="deleteDonor(${donor.id})"
+                >
+                    🔐 Delete
                 </button>
+
             </td>
 
         `;
@@ -711,15 +834,41 @@ function displayDonors() {
     });
 
 
-    document.getElementById("totalAmount").innerText =
+    /* TOTAL */
+
+    document.getElementById(
+        "totalAmount"
+    ).innerText =
         "₹ " + total.toLocaleString("en-IN");
 
 }
 
 
+/* =========================================
+   DELETE DONOR
+   ========================================= */
+
 function deleteDonor(id) {
 
-    if (!confirm("हा देणगीदार Delete करायचा आहे का?")) {
+
+    /* PASSWORD */
+
+    if (
+        !checkPassword(
+            "🔐 देणगीदार Delete करण्यासाठी Password टाका:"
+        )
+    ) {
+        return;
+    }
+
+
+    /* CONFIRM */
+
+    if (
+        !confirm(
+            "⚠️ हा देणगीदार Delete करायचा आहे का?"
+        )
+    ) {
         return;
     }
 
@@ -728,7 +877,9 @@ function deleteDonor(id) {
 
 
     donors =
-        donors.filter(donor => donor.id !== id);
+        donors.filter(
+            donor => donor.id !== id
+        );
 
 
     saveDonors(donors);
@@ -736,8 +887,33 @@ function deleteDonor(id) {
 
     displayDonors();
 
+
+    alert(
+        "✅ देणगीदाराची माहिती Delete झाली."
+    );
+
 }
 
+
+/* =========================================
+   HTML SECURITY
+   ========================================= */
+
+function escapeHTML(text) {
+
+    const div =
+        document.createElement("div");
+
+    div.textContent = text;
+
+    return div.innerHTML;
+
+}
+
+
+/* =========================================
+   INITIAL LOAD
+   ========================================= */
 
 displayDonors();
 
