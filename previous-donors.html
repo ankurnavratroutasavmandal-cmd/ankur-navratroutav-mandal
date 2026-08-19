@@ -397,84 +397,7 @@ footer h2 {
 <main class="container">
 
 
-<!-- ADD DONOR -->
 
-<div class="add-box">
-
-<h2>➕ देणगीदाराची माहिती जोडा</h2>
-
-<div class="form-grid">
-
-<div class="form-group">
-
-<label>देणगीदाराचे नाव</label>
-
-<input
-type="text"
-id="donorName"
-placeholder="उदा. संतोष पाटील"
->
-
-</div>
-
-
-<div class="form-group">
-
-<label>गाव</label>
-
-<input
-type="text"
-id="donorPlace"
-placeholder="उदा. बेळगुंदी"
->
-
-</div>
-
-
-<div class="form-group">
-
-<label>देणगी रक्कम</label>
-
-<input
-type="number"
-id="donorAmount"
-placeholder="उदा. 5000"
-min="1"
->
-
-</div>
-
-</div>
-
-
-<div class="form-grid" style="margin-top:15px;">
-
-<div class="form-group">
-
-<label>वर्ष</label>
-
-<select id="donorYear">
-
-<option value="2025">2025</option>
-<option value="2024">2024</option>
-<option value="2023">2023</option>
-<option value="2022">2022</option>
-
-</select>
-
-</div>
-
-</div>
-
-
-<button class="add-btn" onclick="addDonor()">
-➕ देणगीदार Add करा
-</button>
-
-</div>
-
-
-<!-- YEAR -->
 
 <div class="year-box">
 
@@ -485,9 +408,7 @@ min="1"
 <select id="year" onchange="displayDonors()">
 
 <option value="2025">2025</option>
-<option value="2024">2024</option>
-<option value="2023">2023</option>
-<option value="2022">2022</option>
+<option value="2026">2026</option>
 
 </select>
 
@@ -525,7 +446,6 @@ min="1"
 
 <th>देणगी</th>
 
-<th>Delete</th>
 
 </tr>
 
@@ -643,13 +563,13 @@ function addDonor() {
 
         id: Date.now(),
 
-        name: name,
+        name: swapnil,
 
-        place: place,
+        place: belgundi,
 
-        amount: amount,
+        amount: 5001,
 
-        year: year
+        year: 2025
 
     });
 
