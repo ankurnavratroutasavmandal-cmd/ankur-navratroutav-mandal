@@ -1,591 +1,694 @@
 <!DOCTYPE html>
 <html lang="mr">
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>देणगी पावती - सार्वजनिक अंकुर नवरात्रोत्सव मंडळ</title>
 
-<title>मागील वर्षाचे देणगीदार | सार्वजनिक अंकुर नवरात्रोत्सव मंडळ</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<style>
+        body {
+            font-family: Arial, "Noto Sans Devanagari", sans-serif;
+            background: #fff8ef;
+            color: #4a1608;
+        }
 
-* {
-    box-sizing: border-box;
-}
+        header {
+            background: #8b0000;
+            color: white;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-body {
-    margin: 0;
-    font-family: "Noto Sans Devanagari", "Mangal", Arial, sans-serif;
-    background: linear-gradient(135deg, #fff8e1, #fff3e0);
-    color: #4a1c00;
-}
+        .logo-title {
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 1.4;
+        }
 
-/* HEADER */
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 18px;
+        }
 
-header {
-    background: linear-gradient(135deg, #8b0000, #c62828, #ef6c00);
-    color: white;
-    padding: 15px 7%;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.25);
-    border-bottom: 4px solid #ffd54f;
-}
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
 
-/* NAV */
+        .page-title {
+            text-align: center;
+            color: #9b0000;
+            margin-bottom: 30px;
+        }
 
-nav {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 6px;
-    margin-top: 15px;
-}
+        .form-box {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+            max-width: 700px;
+            margin: auto;
+        }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 15px;
-    border-radius: 25px;
-    font-weight: bold;
-}
+        .form-group {
+            margin-bottom: 18px;
+        }
 
-nav a:hover,
-nav a.active {
-    background: #ffd54f;
-    color: #7b0000;
-}
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 7px;
+        }
 
-/* HERO */
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 7px;
+            font-size: 16px;
+        }
 
-.hero {
-    padding: 60px 20px;
-    text-align: center;
-    background:
-        radial-gradient(circle at top,
-        rgba(255,213,79,0.3),
-        transparent 50%),
-        linear-gradient(135deg,
-        #650000,
-        #a90000,
-        #e65100);
-    color: white;
-    border-bottom: 5px solid #ffd54f;
-}
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
 
-.hero h1 {
-    margin: 0 0 12px;
-    color: #ffd54f;
-    font-size: 40px;
-}
+        .btn {
+            background: #9b0000;
+            color: white;
+            border: none;
+            padding: 13px 25px;
+            border-radius: 7px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+        }
 
-/* CONTAINER */
+        .btn:hover {
+            background: #6d0000;
+        }
 
-.container {
-    max-width: 1100px;
-    margin: 40px auto;
-    padding: 20px;
-}
+        .receipt {
+            display: none;
+            background: white;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 35px;
+            border: 5px double #9b0000;
+            border-radius: 10px;
+        }
 
+        .receipt-header {
+            text-align: center;
+            border-bottom: 2px solid #9b0000;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
 
-/* YEAR */
+        .receipt-header h1 {
+            color: #9b0000;
+            font-size: 28px;
+        }
 
-.year-box {
-    text-align: center;
-    background: white;
-    padding: 20px;
-    border-radius: 15px;
-    border: 2px solid #ffd54f;
-    margin-bottom: 25px;
-}
+        .receipt-header h2 {
+            margin-top: 8px;
+            color: #4a1608;
+        }
 
-.year-box label {
-    font-size: 18px;
-    font-weight: bold;
-    color: #8b0000;
-}
+        .receipt-title {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 24px;
+            color: #9b0000;
+            font-weight: bold;
+        }
 
-.year-box select {
-    margin-left: 10px;
-    padding: 10px 25px;
-    border-radius: 25px;
-    border: 2px solid #e65100;
-    font-size: 16px;
-}
+        .receipt-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 12px 5px;
+            border-bottom: 1px solid #ddd;
+        }
 
-/* TOTAL */
+        .receipt-row strong {
+            width: 40%;
+        }
 
-.total-box {
-    text-align: center;
-    background: linear-gradient(135deg, #2e7d32, #66bb6a);
-    color: white;
-    padding: 25px;
-    border-radius: 18px;
-    margin-bottom: 30px;
-}
+        .receipt-row span {
+            width: 60%;
+            text-align: right;
+        }
 
-.total-box h2 {
-    margin: 0 0 10px;
-}
+        .amount {
+            font-size: 24px;
+            font-weight: bold;
+            color: #9b0000;
+        }
 
-.total-amount {
-    font-size: 32px;
-    font-weight: bold;
-}
+        .thanks {
+            text-align: center;
+            margin-top: 30px;
+            font-weight: bold;
+            font-size: 18px;
+        }
 
-/* TABLE */
+        .signatures {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 60px;
+        }
 
-.table-wrapper {
-    overflow-x: auto;
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
-}
+        .signature {
+            text-align: center;
+            width: 200px;
+            border-top: 1px solid #555;
+            padding-top: 8px;
+        }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    min-width: 650px;
-}
+        .print-btn {
+            display: block;
+            margin: 25px auto 0;
+            background: #198754;
+        }
 
-th {
-    background: linear-gradient(135deg, #8b0000, #e65100);
-    color: white;
-    padding: 15px;
-}
+        footer {
+            background: #650000;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 50px;
+        }
 
-td {
-    padding: 14px;
-    border-bottom: 1px solid #ffe0b2;
-}
+        @media (max-width: 700px) {
 
-tbody tr:hover {
-    background: #fff8e1;
-}
+            header {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
 
-td:last-child {
-    font-weight: bold;
-    color: #2e7d32;
-}
+            nav a {
+                display: inline-block;
+                margin: 5px;
+            }
 
-.delete-btn {
-    background: #d32f2f;
-    color: white;
-    border: none;
-    padding: 7px 12px;
-    border-radius: 6px;
-    cursor: pointer;
-}
+            .form-box,
+            .receipt {
+                padding: 20px;
+            }
 
-.delete-btn:hover {
-    background: #b71c1c;
-}
+            .receipt-row {
+                flex-direction: column;
+                gap: 5px;
+            }
 
-/* NOTE */
+            .receipt-row strong,
+            .receipt-row span {
+                width: 100%;
+                text-align: left;
+            }
 
-.note {
-    margin-top: 35px;
-    padding: 25px;
-    text-align: center;
-    background: linear-gradient(135deg, #650000, #a90000, #e65100);
-    color: white;
-    border-radius: 18px;
-    border: 2px solid #ffd54f;
-}
+            .signatures {
+                flex-direction: column;
+                gap: 50px;
+                align-items: center;
+            }
+        }
 
-.note h2 {
-    color: #ffd54f;
-}
+        @media print {
 
-/* FOOTER */
+            body {
+                background: white;
+            }
 
-footer {
-    margin-top: 50px;
-    padding: 35px 20px;
-    text-align: center;
-    color: white;
-    background: linear-gradient(135deg, #650000, #8b0000, #b71c1c);
-    border-top: 5px solid #ffd54f;
-}
+            header,
+            .form-box,
+            .page-title,
+            footer,
+            .print-btn {
+                display: none !important;
+            }
 
-footer h2 {
-    color: #ffd54f;
-}
+            .container {
+                margin: 0;
+                padding: 0;
+            }
 
-/* MOBILE */
-
-@media (max-width: 700px) {
-
-    .form-grid {
-        grid-template-columns: 1fr;
-    }
-
-    nav a {
-        font-size: 13px;
-        padding: 8px 10px;
-    }
-
-    .hero h1 {
-        font-size: 30px;
-    }
-
-    .container {
-        padding: 12px;
-    }
-}
-
-</style>
-
+            .receipt {
+                display: block !important;
+                margin: 0;
+                max-width: 100%;
+                border: 5px double #9b0000;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
-
 <header>
 
-<h2>सार्वजनिक अंकुर</h2>
+    <div class="logo-title">
+        सार्वजनिक अंकुर<br>
+        नवरात्रोत्सव मंडळ, बेळगुंदी
+    </div>
 
-<p>नवरात्रोत्सव मंडळ, बेळगुंदी</p>
-
-</div>
-
-</div>
-
-<nav>
-
-<a href="index.html">मुख्यपृष्ठ</a>
-
-<a href="events.html">कार्यक्रम</a>
-
-<a href="aarti.html">आरती</a>
-    
-<a href="annual-report.html">वार्षिक अहवाल</a>
-
-<a href="previous-donors.html" class="active">
-मागील वर्षाचे देणगीदार
-</a>
-
-<a href="contact.html">संपर्क</a>
-
-</nav>
+    <nav>
+        <a href="index.html">मुख्यपृष्ठ</a>
+        <a href="events.html">कार्यक्रम</a>
+        <a href="contact.html">संपर्क</a>
+        <a href="denagi.html">देणगी</a>
+    </nav>
 
 </header>
 
 
-<!-- HERO -->
+<div class="container">
 
-<section class="hero">
-
-<h1>🙏 मागील वर्षाचे देणगीदार</h1>
-
-<p>
-सार्वजनिक अंकुर नवरात्रोत्सव मंडळ, बेळगुंदी
-</p>
-
-</section>
+    <h1 class="page-title">
+        देणगी पावती
+    </h1>
 
 
-<main class="container">
+    <!-- FORM -->
+
+    <div class="form-box">
+
+        <div class="form-group">
+            <label for="receiptNo">
+                पावती क्रमांक
+            </label>
+
+            <input
+                type="text"
+                id="receiptNo"
+                placeholder="उदा. 0001">
+        </div>
 
 
+        <div class="form-group">
+            <label for="date">
+                दिनांक
+            </label>
+
+            <input
+                type="date"
+                id="date">
+        </div>
 
 
-<div class="year-box">
+        <div class="form-group">
+            <label for="name">
+                देणगीदाराचे पूर्ण नाव *
+            </label>
 
-<label for="year">
-📅 वर्ष निवडा:
-</label>
+            <input
+                type="text"
+                id="name"
+                placeholder="देणगीदाराचे नाव">
+        </div>
 
-<select id="year" onchange="displayDonors()">
 
-<option value="2025">2025</option>
-<option value="2026">2026</option>
+        <div class="form-group">
+            <label for="mobile">
+                मोबाईल नंबर
+            </label>
 
-</select>
+            <input
+                type="tel"
+                id="mobile"
+                placeholder="10 अंकी मोबाईल नंबर">
+        </div>
+
+
+        <div class="form-group">
+            <label for="amount">
+                देणगीची रक्कम (₹) *
+            </label>
+
+            <input
+                type="number"
+                id="amount"
+                min="1"
+                placeholder="उदा. 1001">
+        </div>
+
+
+        <div class="form-group">
+            <label for="payment">
+                Payment पद्धत
+            </label>
+
+            <select id="payment">
+
+                <option value="रोख">
+                    रोख
+                </option>
+
+                <option value="UPI">
+                    UPI
+                </option>
+
+                <option value="Bank Transfer">
+                    Bank Transfer
+                </option>
+
+                <option value="Cheque">
+                    Cheque
+                </option>
+
+            </select>
+        </div>
+
+
+        <div class="form-group">
+            <label for="transaction">
+                Transaction ID / UTR नंबर
+            </label>
+
+            <input
+                type="text"
+                id="transaction"
+                placeholder="UPI Transaction ID / UTR">
+        </div>
+
+
+        <div class="form-group">
+            <label for="purpose">
+                देणगीचा उद्देश
+            </label>
+
+            <textarea
+                id="purpose"
+                placeholder="उदा. नवरात्रोत्सव देणगी">
+            </textarea>
+        </div>
+
+
+        <button
+            class="btn"
+            onclick="generateReceipt()">
+
+            पावती तयार करा
+
+        </button>
+
+    </div>
+
+
+    <!-- RECEIPT -->
+
+    <div class="receipt" id="receipt">
+
+        <div class="receipt-header">
+
+            <h1>
+                सार्वजनिक अंकुर नवरात्रोत्सव मंडळ
+            </h1>
+
+            <h2>
+                बेळगुंदी
+            </h2>
+
+            <p>
+                स्थापना २००२
+            </p>
+
+        </div>
+
+
+        <div class="receipt-title">
+            🧾 देणगी पावती
+        </div>
+
+
+        <div class="receipt-row">
+
+            <strong>
+                पावती क्रमांक
+            </strong>
+
+            <span id="rReceiptNo"></span>
+
+        </div>
+
+
+        <div class="receipt-row">
+
+            <strong>
+                दिनांक
+            </strong>
+
+            <span id="rDate"></span>
+
+        </div>
+
+
+        <div class="receipt-row">
+
+            <strong>
+                देणगीदाराचे नाव
+            </strong>
+
+            <span id="rName"></span>
+
+        </div>
+
+
+        <div class="receipt-row">
+
+            <strong>
+                मोबाईल नंबर
+            </strong>
+
+            <span id="rMobile"></span>
+
+        </div>
+
+
+        <div class="receipt-row">
+
+            <strong>
+                देणगीची रक्कम
+            </strong>
+
+            <span
+                id="rAmount"
+                class="amount">
+            </span>
+
+        </div>
+
+
+        <div class="receipt-row">
+
+            <strong>
+                Payment पद्धत
+            </strong>
+
+            <span id="rPayment"></span>
+
+        </div>
+
+
+        <div class="receipt-row">
+
+            <strong>
+                Transaction ID / UTR
+            </strong>
+
+            <span id="rTransaction"></span>
+
+        </div>
+
+
+        <div class="receipt-row">
+
+            <strong>
+                देणगीचा उद्देश
+            </strong>
+
+            <span id="rPurpose"></span>
+
+        </div>
+
+
+        <div class="thanks">
+
+            🙏 नवरात्रोत्सवासाठी दिलेल्या
+            आपल्या सहकार्याबद्दल मनःपूर्वक धन्यवाद! 🙏
+
+        </div>
+
+
+        <div class="signatures">
+
+            <div class="signature">
+                देणगीदाराची सही
+            </div>
+
+            <div class="signature">
+                मंडळाची सही
+            </div>
+
+        </div>
+
+
+        <button
+            class="btn print-btn"
+            onclick="window.print()">
+
+            🖨️ पावती Print करा
+
+        </button>
+
+    </div>
 
 </div>
 
-
-<!-- TOTAL -->
-
-<div class="total-box">
-
-<h2>💰 एकूण देणगी</h2>
-
-<div class="total-amount" id="totalAmount">
-₹ 0
-</div>
-
-</div>
-
-
-<!-- TABLE -->
-
-<div class="table-wrapper">
-
-<table>
-
-<thead>
-
-<tr>
-
-<th>अ.क्र.</th>
-
-<th>देणगीदाराचे नाव</th>
-
-<th>गाव</th>
-
-<th>देणगी</th>
-
-
-</tr>
-
-</thead>
-
-<tbody id="donorTable">
-
-</tbody>
-
-</table>
-
-</div>
-
-
-<!-- NOTE -->
-
-<div class="note">
-
-<h2>🌺 देणगीदारांचे मनःपूर्वक आभार 🌺</h2>
-
-<p>
-मंडळाच्या नवरात्रोत्सवासाठी सहकार्य करणाऱ्या
-सर्व देणगीदारांचे सार्वजनिक अंकुर नवरात्रोत्सव
-मंडळ, बेळगुंदी यांच्यातर्फे मनःपूर्वक आभार.
-</p>
-
-</div>
-
-</main>
-
-
-<!-- FOOTER -->
 
 <footer>
 
-<h2>
-सार्वजनिक अंकुर नवरात्रोत्सव मंडळ, बेळगुंदी
-</h2>
+    <h3>
+        सार्वजनिक अंकुर नवरात्रोत्सव मंडळ, बेळगुंदी
+    </h3>
 
-<p>स्थापना : २००२</p>
+    <p>
+        स्थापना २००२
+    </p>
 
-<p>🙏 जय माता दी 🙏</p>
+    <br>
 
-<p>
-© 2026 सार्वजनिक अंकुर नवरात्रोत्सव मंडळ, बेळगुंदी
-</p>
+    <p>
+        📞 +91 6361475213
+        &nbsp; | &nbsp;
+        ✉️ ankurnavratrotsav@gmail.com
+    </p>
 
 </footer>
 
 
 <script>
 
-function getDonors() {
+    // आजची तारीख आपोआप सेट करणे
 
-    return JSON.parse(
-        localStorage.getItem("mandalDonors") || "[]"
-    );
-
-}
+    document.getElementById("date").value =
+        new Date().toISOString().split("T")[0];
 
 
-function saveDonors(donors) {
+    function generateReceipt() {
 
-    localStorage.setItem(
-        "mandalDonors",
-        JSON.stringify(donors)
-    );
+        const receiptNo =
+            document.getElementById("receiptNo").value.trim();
 
-}
+        const date =
+            document.getElementById("date").value;
 
+        const name =
+            document.getElementById("name").value.trim();
 
-function addDonor() {
+        const mobile =
+            document.getElementById("mobile").value.trim();
 
-    const name =
-        document.getElementById("donorName").value.trim();
+        const amount =
+            document.getElementById("amount").value;
 
-    const place =
-        document.getElementById("donorPlace").value.trim();
+        const payment =
+            document.getElementById("payment").value;
 
-    const amount =
-        Number(document.getElementById("donorAmount").value);
+        const transaction =
+            document.getElementById("transaction").value.trim();
 
-    const year =
-        document.getElementById("donorYear").value;
-
-
-    if (!name) {
-
-        alert("कृपया देणगीदाराचे नाव लिहा.");
-        return;
-
-    }
+        const purpose =
+            document.getElementById("purpose").value.trim();
 
 
-    if (!place) {
+        if (name === "") {
 
-        alert("कृपया गावाचे नाव लिहा.");
-        return;
+            alert("कृपया देणगीदाराचे नाव भरा.");
 
-    }
-
-
-    if (!amount || amount <= 0) {
-
-        alert("कृपया योग्य देणगी रक्कम लिहा.");
-        return;
-
-    }
+            return;
+        }
 
 
-    const donors = getDonors();
+        if (amount === "" || Number(amount) <= 0) {
+
+            alert("कृपया योग्य देणगीची रक्कम भरा.");
+
+            return;
+        }
 
 
-    donors.push({
-
-        id: Date.now(),
-
-        name: swapnil,
-
-        place: belgundi,
-
-        amount: 5001,
-
-        year: 2025
-
-    });
+        document.getElementById("rReceiptNo").innerText =
+            receiptNo || "—";
 
 
-    saveDonors(donors);
+        document.getElementById("rDate").innerText =
+            date ? formatDate(date) : "—";
 
 
-    document.getElementById("donorName").value = "";
-
-    document.getElementById("donorPlace").value = "";
-
-    document.getElementById("donorAmount").value = "";
+        document.getElementById("rName").innerText =
+            name;
 
 
-    document.getElementById("year").value = year;
+        document.getElementById("rMobile").innerText =
+            mobile || "—";
 
 
-    displayDonors();
+        document.getElementById("rAmount").innerText =
+            "₹ " + Number(amount).toLocaleString("en-IN");
 
 
-    alert("देणगीदाराची माहिती यशस्वीपणे Save झाली.");
-
-}
-
-
-function displayDonors() {
-
-    const selectedYear =
-        document.getElementById("year").value;
-
-    const donors = getDonors();
-
-    const table =
-        document.getElementById("donorTable");
-
-    table.innerHTML = "";
+        document.getElementById("rPayment").innerText =
+            payment;
 
 
-    const filtered =
-        donors.filter(donor => donor.year === selectedYear);
+        document.getElementById("rTransaction").innerText =
+            transaction || "—";
 
 
-    let total = 0;
+        document.getElementById("rPurpose").innerText =
+            purpose || "नवरात्रोत्सव देणगी";
 
 
-    if (filtered.length === 0) {
+        document.getElementById("receipt").style.display =
+            "block";
 
-        table.innerHTML = `
-        <tr>
-            <td colspan="5"
-                style="text-align:center;padding:25px;">
-                या वर्षासाठी देणगीदाराची माहिती उपलब्ध नाही.
-            </td>
-        </tr>
-        `;
+
+        document.getElementById("receipt").scrollIntoView({
+            behavior: "smooth"
+        });
 
     }
 
 
-    filtered.forEach((donor, index) => {
+    function formatDate(dateString) {
 
-        total += Number(donor.amount);
+        const parts =
+            dateString.split("-");
 
+        return parts[2] + "-" +
+               parts[1] + "-" +
+               parts[0];
 
-        const row = document.createElement("tr");
-
-
-        row.innerHTML = `
-
-            <td>${index + 1}</td>
-
-            <td>${donor.name}</td>
-
-            <td>${donor.place}</td>
-
-            <td>₹ ${Number(donor.amount).toLocaleString("en-IN")}</td>
-
-            <td>
-                <button
-                    class="delete-btn"
-                    onclick="deleteDonor(${donor.id})">
-                    Delete
-                </button>
-            </td>
-
-        `;
-
-
-        table.appendChild(row);
-
-    });
-
-
-    document.getElementById("totalAmount").innerText =
-        "₹ " + total.toLocaleString("en-IN");
-
-}
-
-
-function deleteDonor(id) {
-
-    if (!confirm("हा देणगीदार Delete करायचा आहे का?")) {
-        return;
     }
-
-
-    let donors = getDonors();
-
-
-    donors =
-        donors.filter(donor => donor.id !== id);
-
-
-    saveDonors(donors);
-
-
-    displayDonors();
-
-}
-
-
-displayDonors();
 
 </script>
 
 </body>
-
 </html>
