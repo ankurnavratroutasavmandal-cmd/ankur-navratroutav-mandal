@@ -7,32 +7,33 @@
     <title>वार्षिक अहवाल | सार्वजनिक अंकुर नवरात्रौत्सव मंडळ</title>
 
 <style>
-        * {
-            box-sizing: border-box;
-        }
+* {
+    box-sizing: border-box;
+}
 
-        body {
-            margin: 0;
-            font-family: "Noto Sans Devanagari", "Mangal", Arial, sans-serif;
-            background: linear-gradient(135deg, #fff8e1, #fff3e0);
-            color: #4a1c00;
-        }
+body {
+    margin: 0;
+    font-family: "Noto Sans Devanagari", "Mangal", Arial, sans-serif;
+    background: linear-gradient(135deg, #fff8e1, #fff3e0);
+    color: #4a1c00;
+}
 
-        /* HEADER */
-        header {
-            background: linear-gradient(135deg, #b71c1c, #e65100, #ff9800);
+/* HEADER */
+
+header {
+   background: linear-gradient(135deg, #b71c1c, #e65100, #ff9800);
             color: white;
             text-align: center;
             padding: 25px 15px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.25);
             border-bottom: 4px solid #ffd54f;
-        }
-
-        header h2 {
+}
+     header h2 {
             margin: 0;
             font-size: 50px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
         }
+
 
         /* NAVIGATION */
         nav {
@@ -44,7 +45,7 @@
             box-shadow: 0 3px 10px rgba(0,0,0,0.2);
         }
 
-        nav a {
+nav {
             color: white;
             text-decoration: none;
             padding: 11px 16px;
@@ -52,13 +53,21 @@
             border-radius: 25px;
             font-weight: bold;
             transition: 0.3s;
-        }
+}
 
-        nav a:hover {
-            background: #ffb300;
-            color: #5d1a00;
-            transform: translateY(-2px);
-        }
+nav a {
+    color:white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+nav a:hover,
+nav a.active {
+    background: #ffd54f;
+    color: #7b0000;
+}
 
         nav a[href="annual-report.html"] {
             background: #ffb300;
