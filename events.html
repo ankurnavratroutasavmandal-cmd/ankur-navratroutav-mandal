@@ -1,301 +1,849 @@
 <!DOCTYPE html>
 <html lang="mr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>सार्वजनिक अंकुर नवरात्रोत्सव मंडळ, बेळगुंदी</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<title>कार्यक्रम | सार्वजनिक अंकुर नवरात्रोत्सव मंडळ</title>
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #fff8ef;
-            color: #4a1608;
-        }
+<style>
 
-        header {
-            background: #8b0000;
-            color: white;
-            padding: 20px 7%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+/* =========================
+   BASIC
+========================= */
 
-        .logo-title {
-            font-size: 24px;
-            font-weight: bold;
-        }
+* {
+    box-sizing: border-box;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 20px;
-        }
+body {
+    margin: 0;
 
-        .hero {
-            min-height: 500px;
-            background: linear-gradient(120deg, #5b0000, #a90000);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            padding: 50px 7%;
-            text-align: center;
-        }
+    font-family:
+        "Noto Sans Devanagari",
+        "Mangal",
+        Arial,
+        sans-serif;
 
-        .hero-text {
-            max-width: 600px;
-        }
+    background:
+        linear-gradient(
+            135deg,
+            #fff8e1,
+            #fff3e0
+        );
 
-        .hero h1 {
-            font-size: 42px;
-            color: #ffd21c;
-            margin: 15px 0;
-        }
+    color: #4a1c00;
+}
 
-        .hero h2 {
-            font-size: 28px;
-        }
 
-        .hero p {
-            font-size: 18px;
-            line-height: 1.8;
-            margin: 20px 0;
-        }
+/* =========================
+   HEADER
+========================= */
 
-        .btn {
-            display: inline-block;
-            background: #ffca05;
-            color: #6b0000;
-            padding: 12px 25px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: bold;
-        }
+header {
 
-        .devi {
-            width: 350px;
-            height: 350px;
-            border-radius: 50%;
-            border: 8px solid #f5c542;
-            object-fit: cover;
-        }
+    background:
+        linear-gradient(
+            135deg,
+            #7b0000,
+            #b71c1c,
+            #e65100
+        );
 
-        .features {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            padding: 50px 7%;
-        }
+    color: white;
 
-        .card {
-            background: white;
-            padding: 30px 20px;
-            text-align: center;
-            border-radius: 12px;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.12);
-        }
+    padding: 20px 7%;
 
-        .card h3 {
-            color: #a40000;
-            margin-bottom: 10px;
-        }
+    box-shadow:
+        0 5px 18px rgba(0,0,0,0.25);
 
-        .events {
-            padding: 30px 7% 60px;
-        }
+    border-bottom:
+        5px solid #ffd54f;
+}
 
-        .events h2 {
-            text-align: center;
-            color: #9b0000;
-            margin-bottom: 30px;
-            font-size: 32px;
-        }
 
-        .event-box {
-            background: white;
-            padding: 20px;
-            margin-bottom: 15px;
-            border-left: 5px solid #d49b00;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
+/* HEADER TITLE */
 
-        footer {
-            background: #650000;
-            color: white;
-            padding: 30px 7%;
-            text-align: center;
-        }
+.logo-text {
+    text-align: center;
+}
 
-        @media (max-width: 800px) {
-            header {
-                flex-direction: column;
-                gap: 15px;
-            }
+.logo-text h2 {
 
-            nav a {
-                margin: 5px;
-                display: inline-block;
-            }
+    margin: 0;
 
-            .hero {
-                flex-direction: column;
-            }
+    color: #ffd54f;
 
-            .hero h1 {
-                font-size: 30px;
-            }
+    font-size: 28px;
 
-            .devi {
-                width: 250px;
-                height: 250px;
-                margin-top: 30px;
-            }
+    font-weight: bold;
+}
 
-            .features {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+.logo-text p {
+
+    margin: 5px 0 0;
+
+    color: white;
+
+    font-size: 16px;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 18px;
+}
+
+nav a {
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 10px 16px;
+
+    border-radius: 25px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+
+    background: #ffd54f;
+
+    color: #7b0000;
+
+    box-shadow:
+        0 3px 10px rgba(0,0,0,0.2);
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+
+    padding: 55px 20px;
+
+    text-align: center;
+
+    background:
+
+        radial-gradient(
+            circle at top,
+            rgba(255,213,79,0.35),
+            transparent 50%
+        ),
+
+        linear-gradient(
+            135deg,
+            #650000,
+            #a90000,
+            #e65100
+        );
+
+    color: white;
+
+    border-bottom:
+        5px solid #ffd54f;
+}
+
+.hero h1 {
+
+    margin: 0 0 12px;
+
+    color: #ffd54f;
+
+    font-size: 40px;
+}
+
+.hero p {
+
+    margin: 0;
+
+    font-size: 18px;
+}
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.container {
+
+    max-width: 1100px;
+
+    margin: 40px auto;
+
+    padding: 20px;
+}
+
+
+/* =========================
+   EVENT GRID
+========================= */
+
+.events-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+
+/* =========================
+   EVENT BOX
+========================= */
+
+.event-box {
+
+    background: white;
+
+    padding: 28px;
+
+    border-radius: 20px;
+
+    border:
+        2px solid #ffd54f;
+
+    box-shadow:
+        0 7px 22px rgba(0,0,0,0.12);
+
+    transition: 0.3s;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.event-box::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 6px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #8b0000,
+            #e65100,
+            #ffd54f
+        );
+}
+
+.event-box:hover {
+
+    transform:
+        translateY(-5px);
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,0.18);
+}
+
+
+/* EVENT ICON */
+
+.event-icon {
+
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #8b0000,
+            #e65100
+        );
+
+    color: white;
+
+    border-radius: 50%;
+
+    font-size: 28px;
+
+    border:
+        3px solid #ffd54f;
+}
+
+
+/* EVENT TITLE */
+
+.event-box h2 {
+
+    margin: 0 0 18px;
+
+    color: #8b0000;
+
+    font-size: 25px;
+}
+
+
+/* EVENT INFO */
+
+.event-info {
+
+    margin: 12px 0;
+
+    font-size: 16px;
+
+    color: #5d4037;
+}
+
+.event-label {
+
+    font-weight: bold;
+
+    color: #8b0000;
+}
+
+
+/* COMING SOON */
+
+.coming-soon {
+
+    display: inline-block;
+
+    margin-top: 15px;
+
+    padding: 8px 15px;
+
+    border-radius: 20px;
+
+    background: #fff3cd;
+
+    color: #8b0000;
+
+    border:
+        1px solid #ffd54f;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   NOTICE
+========================= */
+
+.event-note {
+
+    margin-top: 35px;
+
+    padding: 25px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #650000,
+            #a90000,
+            #e65100
+        );
+
+    color: white;
+
+    border-radius: 20px;
+
+    border:
+        2px solid #ffd54f;
+
+    box-shadow:
+        0 6px 20px rgba(0,0,0,0.15);
+}
+
+.event-note h2 {
+
+    margin-top: 0;
+
+    color: #ffd54f;
+}
+
+.event-note p {
+
+    line-height: 1.8;
+
+    margin-bottom: 0;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    margin-top: 50px;
+
+    padding: 35px 20px;
+
+    text-align: center;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #650000,
+            #8b0000,
+            #b71c1c
+        );
+
+    border-top:
+        5px solid #ffd54f;
+}
+
+footer h2 {
+
+    color: #ffd54f;
+
+    margin-top: 0;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 18px 10px;
+    }
+
+    .logo-text h2 {
+        font-size: 22px;
+    }
+
+    .logo-text p {
+        font-size: 14px;
+    }
+
+    nav {
+        gap: 5px;
+    }
+
+    nav a {
+        font-size: 13px;
+        padding: 8px 10px;
+    }
+
+    .hero {
+        padding: 40px 15px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .container {
+        padding: 12px;
+    }
+
+    .events-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .event-box {
+        padding: 22px;
+    }
+
+}
+
+
+/* =========================
+   PRINT
+========================= */
+
+@media print {
+
+    header,
+    nav,
+    footer {
+        display: none;
+    }
+
+    body {
+        background: white;
+    }
+
+    .container {
+        max-width: 100%;
+        margin: 0;
+    }
+
+}
+
+</style>
+
 </head>
+
 
 <body>
 
+
+<!-- =========================
+     HEADER
+========================= -->
+
 <header>
-    <div class="logo-title">
-        सार्वजनिक अंकुर<br>
-        नवरात्रोत्सव मंडळ, बेळगुंदी
+
+    <div class="logo-text">
+
+        <h2>
+            सार्वजनिक अंकुर
+        </h2>
+
+        <p>
+            नवरात्रोत्सव मंडळ, बेळगुंदी
+        </p>
+
     </div>
 
+
     <nav>
-        <a href="index.html">मुख्यपृष्ठ</a>
-        <a href="events.html">कार्यक्रम</a>
-        <a href="contact.html">संपर्क</a>
-        <a href="annual-report.html">वार्षिक अहवाल</a>
-        <a href="previous-donors.html">मागील वर्षाचे देणगीदार</a>
+
+        <a href="index.html">
+            मुख्यपृष्ठ
+        </a>
+
+        <a href="events.html" class="active">
+            कार्यक्रम
+        </a>
+
+        <a href="aarti.html">
+            आरती
+        </a>
+
+        <a href="annual-report.html">
+            वार्षिक अहवाल
+        </a>
+
+        <a href="previous-donors.html">
+            मागील वर्षाचे देणगीदार
+        </a>
+
+        <a href="contact.html">
+            संपर्क
+        </a>
+
     </nav>
+
 </header>
+
+
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero">
 
-    <div class="hero-text">
+    <h1>
+        📅 आगामी कार्यक्रम
+    </h1>
 
-        <p>॥ या देवी सर्वभूतेषु शक्तिरूपेण संस्थिता ॥</p>
-
-        <h2>सार्वजनिक अंकुर</h2>
-
-        <h1>नवरात्रोत्सव मंडळ,<br>बेळगुंदी</h1>
-
-        <p>स्थापना २००२</p>
-
-        <p>
-            परंपरा • संस्कृती • एकता • समाजसेवा
-        </p>
-
-        <a href="events.html" class="btn">
-            आमचे कार्यक्रम
-        </a>
-
-    </div>
-
-    <div>
-     <img src="devi.jpg"
-     alt="नवरात्रोत्सव देवी"
-     class="devi">   
-    </div>
+    <p>
+        सार्वजनिक अंकुर नवरात्रोत्सव मंडळ, बेळगुंदी
+    </p>
 
 </section>
 
-<section class="features">
 
-    <div class="card">
-        <h3>🙏 आपली परंपरा</h3>
-        <p>
-            दीर्घ परंपरा आणि धार्मिक भावनेने साजरा होणारा नवरात्रोत्सव.
-        </p>
+<!-- =========================
+     MAIN
+========================= -->
+
+<section class="container">
+
+
+    <div class="events-grid">
+
+
+        <!-- EVENT 1 -->
+
+        <div class="event-box">
+
+            <div class="event-icon">
+                🪔
+            </div>
+
+            <h2>
+                घटस्थापना
+            </h2>
+
+            <div class="event-info">
+
+                📅
+                <span class="event-label">
+                    तारीख :
+                </span>
+
+                लवकरच जाहीर
+
+            </div>
+
+            <div class="event-info">
+
+                ⏰
+                <span class="event-label">
+                    वेळ :
+                </span>
+
+                सकाळी
+
+            </div>
+
+            <div class="event-info">
+
+                📍
+                <span class="event-label">
+                    स्थळ :
+                </span>
+
+                बेळगुंदी
+
+            </div>
+
+            <span class="coming-soon">
+                कार्यक्रम लवकरच
+            </span>
+
+        </div>
+
+
+        <!-- EVENT 2 -->
+
+        <div class="event-box">
+
+            <div class="event-icon">
+                🙏
+            </div>
+
+            <h2>
+                नवरात्र विशेष पूजा
+            </h2>
+
+            <div class="event-info">
+
+                📅
+                <span class="event-label">
+                    तारीख :
+                </span>
+
+                लवकरच जाहीर
+
+            </div>
+
+            <div class="event-info">
+
+                ⏰
+                <span class="event-label">
+                    वेळ :
+                </span>
+
+                सकाळी
+
+            </div>
+
+            <div class="event-info">
+
+                📍
+                <span class="event-label">
+                    स्थळ :
+                </span>
+
+                बेळगुंदी
+
+            </div>
+
+            <span class="coming-soon">
+                कार्यक्रम लवकरच
+            </span>
+
+        </div>
+
+
+        <!-- EVENT 3 -->
+
+        <div class="event-box">
+
+            <div class="event-icon">
+                🕉️
+            </div>
+
+            <h2>
+                महाआरती
+            </h2>
+
+            <div class="event-info">
+
+                📅
+                <span class="event-label">
+                    तारीख :
+                </span>
+
+                लवकरच जाहीर
+
+            </div>
+
+            <div class="event-info">
+
+                ⏰
+                <span class="event-label">
+                    वेळ :
+                </span>
+
+                संध्याकाळी
+
+            </div>
+
+            <div class="event-info">
+
+                📍
+                <span class="event-label">
+                    स्थळ :
+                </span>
+
+                बेळगुंदी
+
+            </div>
+
+            <span class="coming-soon">
+                कार्यक्रम लवकरच
+            </span>
+
+        </div>
+
+
+        <!-- EVENT 4 -->
+
+        <div class="event-box">
+
+            <div class="event-icon">
+                🎭
+            </div>
+
+            <h2>
+                सांस्कृतिक कार्यक्रम
+            </h2>
+
+            <div class="event-info">
+
+                📅
+                <span class="event-label">
+                    तारीख :
+                </span>
+
+                लवकरच जाहीर
+
+            </div>
+
+            <div class="event-info">
+
+                ⏰
+                <span class="event-label">
+                    वेळ :
+                </span>
+
+                संध्याकाळी
+
+            </div>
+
+            <div class="event-info">
+
+                📍
+                <span class="event-label">
+                    स्थळ :
+                </span>
+
+                बेळगुंदी
+
+            </div>
+
+            <span class="coming-soon">
+                कार्यक्रम लवकरच
+            </span>
+
+        </div>
+
+
     </div>
 
-    <div class="card">
-        <h3>🤝 एकता</h3>
+
+    <!-- NOTICE -->
+
+    <div class="event-note">
+
+        <h2>
+            📢 महत्वाची सूचना
+        </h2>
+
         <p>
-            समाजातील सर्व घटकांना एकत्र आणणारा उत्सव.
+            नवरात्रोत्सवातील कार्यक्रमांच्या अचूक तारखा,
+            वेळ आणि इतर माहिती मंडळाकडून जाहीर झाल्यानंतर
+            या पेजवर अपडेट करण्यात येईल.
         </p>
+
     </div>
 
-    <div class="card">
-        <h3>🪔 संस्कृती</h3>
-        <p>
-            आपल्या संस्कृतीचे जतन आणि पुढील पिढीपर्यंत पोहोचवण्याचा प्रयत्न.
-        </p>
-    </div>
-
-    <div class="card">
-        <h3>❤️ समाजसेवा</h3>
-        <p>
-            नवरात्रोत्सवातून समाजासाठी विविध उपक्रम आयोजित केले जातात.
-        </p>
-    </div>
-
-    <div class="card">
-        <h3>🎵 भक्ती</h3>
-        <p>
-            भक्ती, संगीत आणि आनंदाने नटलेला भव्य उत्सव.
-        </p>
-    </div>
-
-    <div class="card">
-        <h3>👥 आपले मंडळ</h3>
-        <p>
-            समर्पित कार्यकर्ते आणि सदस्यांचा मिळून बनलेला अंकुर परिवार.
-        </p>
-    </div>
 
 </section>
 
-<section class="events">
 
-    <h2>आगामी कार्यक्रम</h2>
-
-    <div class="event-box">
-        <h3>घटस्थापना</h3>
-        <p>📅 11 ऑक्टोबर 2026 </p>
-        <p>⏰ संध्याकाळी 06:30 वा.</p>
-        <p>📍 कलमेश्वर गल्ली , बेळगुंदी</p>
-    </div>
-
-    <div class="event-box">
-        <h3>नित्य आरती व महाआरती</h3>
-        <p>📅 11 ते 19 ऑक्टोबर 2026</p>
-        <p>⏰ संध्याकाळी 08:00 वा.</p>
-        <p>📍कलमेश्वर गल्ली , बेळगुंदी</p>
-    </div>
-
-
-</section>
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
-    <h3>सार्वजनिक अंकुर नवरात्रोत्सव मंडळ, बेळगुंदी</h3>
-
-    <p>स्थापना २००२</p>
-
-    <br>
+    <h2>
+        सार्वजनिक अंकुर नवरात्रोत्सव मंडळ, बेळगुंदी
+    </h2>
 
     <p>
-        📞 +91 6361475213
-        &nbsp; | &nbsp;
-        ✉️ ankurnavratrotsav@gmail.com
+        स्थापना : २००२
     </p>
 
-    <br>
+    <p>
+        🙏 जय माता दी 🙏
+    </p>
 
     <p>
         © 2026 सार्वजनिक अंकुर नवरात्रोत्सव मंडळ, बेळगुंदी
@@ -303,5 +851,863 @@
 
 </footer>
 
+
 </body>
+
+</html><!DOCTYPE html>
+<html lang="mr">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>कार्यक्रम | सार्वजनिक अंकुर नवरात्रोत्सव मंडळ</title>
+
+<style>
+
+/* =========================
+   BASIC
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    font-family:
+        "Noto Sans Devanagari",
+        "Mangal",
+        Arial,
+        sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff8e1,
+            #fff3e0
+        );
+
+    color: #4a1c00;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+
+    background:
+        linear-gradient(
+            135deg,
+            #7b0000,
+            #b71c1c,
+            #e65100
+        );
+
+    color: white;
+
+    padding: 20px 7%;
+
+    box-shadow:
+        0 5px 18px rgba(0,0,0,0.25);
+
+    border-bottom:
+        5px solid #ffd54f;
+}
+
+
+/* HEADER TITLE */
+
+.logo-text {
+    text-align: center;
+}
+
+.logo-text h2 {
+
+    margin: 0;
+
+    color: #ffd54f;
+
+    font-size: 28px;
+
+    font-weight: bold;
+}
+
+.logo-text p {
+
+    margin: 5px 0 0;
+
+    color: white;
+
+    font-size: 16px;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 18px;
+}
+
+nav a {
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 10px 16px;
+
+    border-radius: 25px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+
+    background: #ffd54f;
+
+    color: #7b0000;
+
+    box-shadow:
+        0 3px 10px rgba(0,0,0,0.2);
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+
+    padding: 55px 20px;
+
+    text-align: center;
+
+    background:
+
+        radial-gradient(
+            circle at top,
+            rgba(255,213,79,0.35),
+            transparent 50%
+        ),
+
+        linear-gradient(
+            135deg,
+            #650000,
+            #a90000,
+            #e65100
+        );
+
+    color: white;
+
+    border-bottom:
+        5px solid #ffd54f;
+}
+
+.hero h1 {
+
+    margin: 0 0 12px;
+
+    color: #ffd54f;
+
+    font-size: 40px;
+}
+
+.hero p {
+
+    margin: 0;
+
+    font-size: 18px;
+}
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.container {
+
+    max-width: 1100px;
+
+    margin: 40px auto;
+
+    padding: 20px;
+}
+
+
+/* =========================
+   EVENT GRID
+========================= */
+
+.events-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+
+/* =========================
+   EVENT BOX
+========================= */
+
+.event-box {
+
+    background: white;
+
+    padding: 28px;
+
+    border-radius: 20px;
+
+    border:
+        2px solid #ffd54f;
+
+    box-shadow:
+        0 7px 22px rgba(0,0,0,0.12);
+
+    transition: 0.3s;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.event-box::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 6px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #8b0000,
+            #e65100,
+            #ffd54f
+        );
+}
+
+.event-box:hover {
+
+    transform:
+        translateY(-5px);
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,0.18);
+}
+
+
+/* EVENT ICON */
+
+.event-icon {
+
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #8b0000,
+            #e65100
+        );
+
+    color: white;
+
+    border-radius: 50%;
+
+    font-size: 28px;
+
+    border:
+        3px solid #ffd54f;
+}
+
+
+/* EVENT TITLE */
+
+.event-box h2 {
+
+    margin: 0 0 18px;
+
+    color: #8b0000;
+
+    font-size: 25px;
+}
+
+
+/* EVENT INFO */
+
+.event-info {
+
+    margin: 12px 0;
+
+    font-size: 16px;
+
+    color: #5d4037;
+}
+
+.event-label {
+
+    font-weight: bold;
+
+    color: #8b0000;
+}
+
+
+/* COMING SOON */
+
+.coming-soon {
+
+    display: inline-block;
+
+    margin-top: 15px;
+
+    padding: 8px 15px;
+
+    border-radius: 20px;
+
+    background: #fff3cd;
+
+    color: #8b0000;
+
+    border:
+        1px solid #ffd54f;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   NOTICE
+========================= */
+
+.event-note {
+
+    margin-top: 35px;
+
+    padding: 25px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #650000,
+            #a90000,
+            #e65100
+        );
+
+    color: white;
+
+    border-radius: 20px;
+
+    border:
+        2px solid #ffd54f;
+
+    box-shadow:
+        0 6px 20px rgba(0,0,0,0.15);
+}
+
+.event-note h2 {
+
+    margin-top: 0;
+
+    color: #ffd54f;
+}
+
+.event-note p {
+
+    line-height: 1.8;
+
+    margin-bottom: 0;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    margin-top: 50px;
+
+    padding: 35px 20px;
+
+    text-align: center;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #650000,
+            #8b0000,
+            #b71c1c
+        );
+
+    border-top:
+        5px solid #ffd54f;
+}
+
+footer h2 {
+
+    color: #ffd54f;
+
+    margin-top: 0;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 18px 10px;
+    }
+
+    .logo-text h2 {
+        font-size: 22px;
+    }
+
+    .logo-text p {
+        font-size: 14px;
+    }
+
+    nav {
+        gap: 5px;
+    }
+
+    nav a {
+        font-size: 13px;
+        padding: 8px 10px;
+    }
+
+    .hero {
+        padding: 40px 15px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .container {
+        padding: 12px;
+    }
+
+    .events-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .event-box {
+        padding: 22px;
+    }
+
+}
+
+
+/* =========================
+   PRINT
+========================= */
+
+@media print {
+
+    header,
+    nav,
+    footer {
+        display: none;
+    }
+
+    body {
+        background: white;
+    }
+
+    .container {
+        max-width: 100%;
+        margin: 0;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+    <div class="logo-text">
+
+        <h2>
+            सार्वजनिक अंकुर
+        </h2>
+
+        <p>
+            नवरात्रोत्सव मंडळ, बेळगुंदी
+        </p>
+
+    </div>
+
+
+    <nav>
+
+        <a href="index.html">
+            मुख्यपृष्ठ
+        </a>
+
+        <a href="events.html" class="active">
+            कार्यक्रम
+        </a>
+
+        <a href="aarti.html">
+            आरती
+        </a>
+
+        <a href="annual-report.html">
+            वार्षिक अहवाल
+        </a>
+
+        <a href="previous-donors.html">
+            मागील वर्षाचे देणगीदार
+        </a>
+
+        <a href="contact.html">
+            संपर्क
+        </a>
+
+    </nav>
+
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+    <h1>
+        📅 आगामी कार्यक्रम
+    </h1>
+
+    <p>
+        सार्वजनिक अंकुर नवरात्रोत्सव मंडळ, बेळगुंदी
+    </p>
+
+</section>
+
+
+<!-- =========================
+     MAIN
+========================= -->
+
+<section class="container">
+
+
+    <div class="events-grid">
+
+
+        <!-- EVENT 1 -->
+
+        <div class="event-box">
+
+            <div class="event-icon">
+                🪔
+            </div>
+
+            <h2>
+                घटस्थापना
+            </h2>
+
+            <div class="event-info">
+
+                📅
+                <span class="event-label">
+                    तारीख :
+                </span>
+
+                लवकरच जाहीर
+
+            </div>
+
+            <div class="event-info">
+
+                ⏰
+                <span class="event-label">
+                    वेळ :
+                </span>
+
+                सकाळी
+
+            </div>
+
+            <div class="event-info">
+
+                📍
+                <span class="event-label">
+                    स्थळ :
+                </span>
+
+                बेळगुंदी
+
+            </div>
+
+            <span class="coming-soon">
+                कार्यक्रम लवकरच
+            </span>
+
+        </div>
+
+
+        <!-- EVENT 2 -->
+
+        <div class="event-box">
+
+            <div class="event-icon">
+                🙏
+            </div>
+
+            <h2>
+                नवरात्र विशेष पूजा
+            </h2>
+
+            <div class="event-info">
+
+                📅
+                <span class="event-label">
+                    तारीख :
+                </span>
+
+                लवकरच जाहीर
+
+            </div>
+
+            <div class="event-info">
+
+                ⏰
+                <span class="event-label">
+                    वेळ :
+                </span>
+
+                सकाळी
+
+            </div>
+
+            <div class="event-info">
+
+                📍
+                <span class="event-label">
+                    स्थळ :
+                </span>
+
+                बेळगुंदी
+
+            </div>
+
+            <span class="coming-soon">
+                कार्यक्रम लवकरच
+            </span>
+
+        </div>
+
+
+        <!-- EVENT 3 -->
+
+        <div class="event-box">
+
+            <div class="event-icon">
+                🕉️
+            </div>
+
+            <h2>
+                महाआरती
+            </h2>
+
+            <div class="event-info">
+
+                📅
+                <span class="event-label">
+                    तारीख :
+                </span>
+
+                लवकरच जाहीर
+
+            </div>
+
+            <div class="event-info">
+
+                ⏰
+                <span class="event-label">
+                    वेळ :
+                </span>
+
+                संध्याकाळी
+
+            </div>
+
+            <div class="event-info">
+
+                📍
+                <span class="event-label">
+                    स्थळ :
+                </span>
+
+                बेळगुंदी
+
+            </div>
+
+            <span class="coming-soon">
+                कार्यक्रम लवकरच
+            </span>
+
+        </div>
+
+
+        <!-- EVENT 4 -->
+
+        <div class="event-box">
+
+            <div class="event-icon">
+                🎭
+            </div>
+
+            <h2>
+                सांस्कृतिक कार्यक्रम
+            </h2>
+
+            <div class="event-info">
+
+                📅
+                <span class="event-label">
+                    तारीख :
+                </span>
+
+                लवकरच जाहीर
+
+            </div>
+
+            <div class="event-info">
+
+                ⏰
+                <span class="event-label">
+                    वेळ :
+                </span>
+
+                संध्याकाळी
+
+            </div>
+
+            <div class="event-info">
+
+                📍
+                <span class="event-label">
+                    स्थळ :
+                </span>
+
+                बेळगुंदी
+
+            </div>
+
+            <span class="coming-soon">
+                कार्यक्रम लवकरच
+            </span>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- NOTICE -->
+
+    <div class="event-note">
+
+        <h2>
+            📢 महत्वाची सूचना
+        </h2>
+
+        <p>
+            नवरात्रोत्सवातील कार्यक्रमांच्या अचूक तारखा,
+            वेळ आणि इतर माहिती मंडळाकडून जाहीर झाल्यानंतर
+            या पेजवर अपडेट करण्यात येईल.
+        </p>
+
+    </div>
+
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <h2>
+        सार्वजनिक अंकुर नवरात्रोत्सव मंडळ, बेळगुंदी
+    </h2>
+
+    <p>
+        स्थापना : २००२
+    </p>
+
+    <p>
+        🙏 जय माता दी 🙏
+    </p>
+
+    <p>
+        © 2026 सार्वजनिक अंकुर नवरात्रोत्सव मंडळ, बेळगुंदी
+    </p>
+
+</footer>
+
+
+</body>
+
 </html>
